@@ -23,7 +23,7 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "cddynamics_joint_filter_node");
 
   ros::NodeHandle nh;
-  double frequency = 250.0;
+  double frequency = 280.0;
 
   // Parameters
   std::string input_velocity_topic_name;
