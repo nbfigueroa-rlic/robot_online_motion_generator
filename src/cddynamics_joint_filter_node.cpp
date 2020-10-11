@@ -23,12 +23,12 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "cddynamics_joint_filter_node");
 
   ros::NodeHandle nh;
-  double frequency = 150.0;
+  double frequency = 250.0;
 
   // Parameters
   std::string input_velocity_topic_name;
   std::string output_velocity_topic_name;
-  double joint_velocity_limit (1.5); // rad/s
+  double joint_velocity_limit (1.5); // rad/s [Change to 0.85 for UR10!] TODO: give as parameter
 
   // Getting parameters from launch file or parameter server (uploaded through yaml file)
   if (!nh.getParam("input_velocity_topic_name", input_velocity_topic_name))   {
